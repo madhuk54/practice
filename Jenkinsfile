@@ -1,28 +1,29 @@
 pipeline {
     agent any
-
-    environment {
+     environment {
         JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21'
         PATH = "${JAVA_HOME}\\bin;${env.PATH}"
     }
 
+
     stages {
-        stage('Clone Repository') {
+        stage('Checkout') {
             steps {
-                git branch: 'main' , url: 'https://github.com/madhuk54/practice.git'
+                git 'https://github.com/madhuk54/practice.git'
             }
         }
 
         stage('Compile') {
             steps {
-                bat 'javac *.java'
+                bat 'javac practice\\User.java'
             }
         }
 
         stage('Run') {
             steps {
-                bat 'java User user@example.com'
+                bat 'java -cp . practice.User user@example.com'
             }
         }
     }
 }
+
