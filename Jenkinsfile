@@ -21,7 +21,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                sh 'java User'
+                sh 'java Add user@example.com'
             }
         }
     }
