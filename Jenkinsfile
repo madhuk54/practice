@@ -13,7 +13,7 @@ pipeline {
 
         stage('Compile') {
             steps {
-                bat 'javac Add.java'
+                bat 'javac User.java'
             }
         }
 
