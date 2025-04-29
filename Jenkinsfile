@@ -15,13 +15,13 @@ pipeline {
 
         stage('Compile') {
             steps {
-                sh 'javac User.java'
+                bat 'javac User.java'
             }
         }
 
         stage('Run') {
             steps {
-                sh 'java Add user@example.com'
+                bat 'java Add user@example.com'
             }
         }
     }
