@@ -19,7 +19,7 @@ pipeline {
 
         stage('Run') {
             steps {
-                bat 'java -cp . Add user@example.com'
+                bat 'java User.java'
             }
         }
     }
