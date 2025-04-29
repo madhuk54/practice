@@ -4,8 +4,6 @@ pipeline {
         JAVA_HOME = 'C:\\Program Files\\Java\\jdk-21'
         PATH = "${JAVA_HOME}\\bin;${env.PATH}"
     }
-
-
     stages {
         stage('Checkout') {
             steps {
@@ -15,15 +13,16 @@ pipeline {
 
         stage('Compile') {
             steps {
-                bat 'javac practice\\User.java'
+                bat 'javac Add.java'
             }
         }
 
         stage('Run') {
             steps {
-                bat 'java -cp . practice.User user@example.com'
+                bat 'java -cp . Add user@example.com'
             }
         }
     }
 }
+
 
