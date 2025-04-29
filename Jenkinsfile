@@ -15,7 +15,7 @@ pipeline {
 
         stage('Compile') {
             steps {
-                bat 'javac User.java'
+                bat 'javac *.java'
             }
         }
 
